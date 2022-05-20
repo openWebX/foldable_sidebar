@@ -9,11 +9,11 @@ enum FSBStatus {
 
 class FoldableSidebarBuilder extends StatelessWidget {
   final FSBStatus status;
-  final Color drawerBackgroundColor;
+  final Color? drawerBackgroundColor;
   final Widget drawer;
   final Widget screenContents;
 
-  const FoldableSidebarBuilder({Key key, @required this.status, @required this.drawer, @required this.screenContents, this.drawerBackgroundColor}) : super(key: key);
+  const FoldableSidebarBuilder({Key key, required this.status, required this.drawer, required this.screenContents, this.drawerBackgroundColor}) : super(key: key);
 
   Tween<double> getTween() {
     switch (status) {
